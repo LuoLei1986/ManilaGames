@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Logistics
 {
@@ -8,7 +9,6 @@ namespace Logistics
 
         public string _describe;
 
-        public 
     }
 
     public class Ship
@@ -42,15 +42,9 @@ namespace Logistics
             _channel= channel;
         }
 
-        public void SetInitPostion(int channel, int initPosition)
-        {
-            _initPosition= initPosition;
-            _channel= channel;
-        }
-
         public void Onboarding(string people)
         {
-            if(_allowedCrews > _crews.count())
+            if(_allowedCrews > _crews.Count)
                 _crews.Add(people);
         }
 
@@ -78,8 +72,7 @@ namespace Logistics
 
     public class Investment 
     {
-        private 
-        public class 
+        
     }
 
     public class InvestmentItem
@@ -105,9 +98,8 @@ namespace Logistics
 
         private string _beneficiary;
 
-        public InvestmentItem(int earnings, int cost)
-        {
-            _earnings = earnings;  
+        public DynamicInvestmentItem(int earnings, int cost)
+        { 
             _cost = cost;
         }
 

@@ -49,19 +49,19 @@ namespace Stocks
             if(_inventory < quantity)
                 return false;
 
-             _inventory <= _inventory - quantity;
+             _inventory = _inventory - quantity;
             return true;
         }
 
-        public bool Sell(string stockName, int price, int quantity)
+        public bool Sell(string stockName, int sellPrice, int quantity)
         {
-            if(_price != buyPrice)
+            if(_price != sellPrice)
                 return false;
 
             if(_circulation <= _inventory + quantity)
                  return false;
 
-            _inventory <= _inventory + quantity;
+            _inventory = _inventory + quantity;
             return true;
         }
 
