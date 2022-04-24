@@ -1,3 +1,5 @@
+using Logistics;
+using System;
 public class NormalInvestmentItem
     {
         private int _totalEarnings;
@@ -12,4 +14,17 @@ public class NormalInvestmentItem
 
          public int EarningsPerShare => _totalEarnings;
 
+    }
+
+    public class NormalInvestmentActive<T>
+    {
+        private Action<T> _active;
+
+        private int _price;
+
+        public NormalInvestmentActive(int price, Action<T> active)
+        {
+            _price = price;
+            _active = active;
+        }
     }

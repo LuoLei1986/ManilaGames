@@ -20,7 +20,7 @@ namespace Invest
 
          public List<Share> AvaibleShares =>_shares.Where(x=>x.AvaibleToBuy).ToList();
 
-         public List<Share> BuyedShares =>_shares.Where(x=>!x.AvaibleToBuy).ToList();
+         private List<Share> BuyedShares =>_shares.Where(x=>!x.AvaibleToBuy).ToList();
 
          public int EarningsPerShare => _totalEarnings/BuyedShares.Count();
     }
