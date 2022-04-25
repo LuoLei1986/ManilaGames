@@ -12,14 +12,23 @@ namespace Stocks
         {
             id = Guid.NewGuid().ToString();
             _stocks = new Dictionary<string, Stock>();
+            InitStocks();
         }
 
-        public bool Listed(string stockName, int IPOprice, int count)
+        private void InitStocks()
+        {
+            Listed("plant", 5);
+            Listed("jade", 5);
+            Listed("ginseng", 5);
+            Listed("silk",5);
+        }
+
+        public bool Listed(string stockName, int count)
         {
             if(IsExisted(stockName))
                 return false;
             
-            _stocks.Add(stockName, new Stock(stockName, IPOprice, count));
+            _stocks.Add(stockName, new Stock(stockName, count));
             return true;
         }
 
@@ -28,7 +37,7 @@ namespace Stocks
            return _stocks.ContainsKey(stockName);
         }
 
-        public bool ChangeStockPrice(string stockName, int previousPrice, int currentPrice)
+        public bool UpdateStockPrice(string stockName, int previousPrice, int currentPrice)
         {
              if(IsExisted(stockName))
                 return false;
@@ -40,5 +49,7 @@ namespace Stocks
         {
             return _stocks.Values.ToList();
         }
+
+        public bool ExistedStockPriceAchived30() => _stocks.Any(x => x.Value.GetPrice() == 30);
     }
 }

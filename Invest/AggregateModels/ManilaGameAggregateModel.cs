@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Stocks;
 using Logistics;
+using Stocks;
 
 namespace Invest.AggregateModels
 {
-
     public class ManilaGameAggregateModel
     {
         public List<string> _players;
@@ -45,24 +44,31 @@ namespace Invest.AggregateModels
 
         private void InitActivesInvestItems()
         {
-            NormalInvestmentActive<Ship> test = new NormalInvestmentActive<Ship>(3, ShipMoveOneStep);
-            //
-            _investItems.Add(new DynamicInvestmentItem(18,new List<Share>(){new Share(1), new Share(2), new Share(3)}));
-            _investItems.Add(new DynamicInvestmentItem(32,new List<Share>(){new Share(3), new Share(4), new Share(5)}));
-            _investItems.Add(new DynamicInvestmentItem(24,new List<Share>(){new Share(2), new Share(3), new Share(4)}));
-            _investItems.Add(new DynamicInvestmentItem(36,new List<Share>(){new Share(3), new Share(4), new Share(4),new Share(5)}));
+            NormalInvestmentActive<Ship> shipMoveOneStep = new NormalInvestmentActive<Ship>(3, ShipMoveOneStep);
+            NormalInvestmentActive<Ship> shipMoveTwoStep = new NormalInvestmentActive<Ship>(5, ShipMoveTwoStep);        
         }
 
         private void ShipMoveOneStep(Ship ship)
         {
-            ship.GoAhead(1);
+           ship.GoAhead(1);  
         }
 
         private void ShipMoveTwoStep(Ship ship)
         {
-            ship.GoAhead(2);
+           ship.GoAhead(2);  
         }
 
-        public bool IsGameTerminal() => _stockMarket.ExistedStockPriceAchive30();
+        // private void ShipMoveOneStep(Ship ship, string operation = "go")
+        // {
+        //     operation == "go" ?  ship.GoAhead(1):  ship.Goback(1);         
+        // }
+
+        // private void ShipMoveTwoStep(Ship ship, string operation = "go")
+        // {
+        //     operation == "go" ?  ship.GoAhead(2):  ship.Goback(2);   
+        // }
+
+        //public bool IsGameTerminal() => _stockMarket.ExistedStockPriceAchive30();
     }
+
 }

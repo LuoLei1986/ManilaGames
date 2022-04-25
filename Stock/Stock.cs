@@ -9,20 +9,20 @@ namespace Stocks
         private int _price;
         private int _circulation;
         private int _inventory;
-        public Stock(string id,string name, int price, int circulation)
+        public Stock(string id,string name, int circulation)
         {
             _id = id;
             _name = name;
-            _price = price;
+            _price = 0;
             _circulation = circulation;
             _inventory = circulation;
         }
 
-        public Stock(string name, int price, int circulation)
+        public Stock(string name,  int circulation)
         {
             _id = name;
             _name = name;
-            _price = price;
+            _price = 0;
             _circulation = circulation;
              _inventory = circulation;
         }
