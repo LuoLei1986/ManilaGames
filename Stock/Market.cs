@@ -50,6 +50,9 @@ namespace Stocks
             return _stocks.Values.ToList();
         }
 
-        public bool ExistedStockPriceAchived30() => _stocks.Any(x => x.Value.GetPrice() == 30);
+        public bool ExistedStockPriceAchived30()
+        {
+            return _stocks.Any(x => x.Value.GetPrice() == 30);
+        }
     }
 }

@@ -68,7 +68,7 @@ namespace Invest.AggregateModels
         //     operation == "go" ?  ship.GoAhead(2):  ship.Goback(2);   
         // }
 
-        //public bool IsGameTerminal() => _stockMarket.ExistedStockPriceAchive30();
+        public bool IsGameTerminal() => _stockMarket.ExistedStockPriceAchived30();
     }
 
 }
