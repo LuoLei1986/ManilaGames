@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logistics", "Foods\Logistic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invest", "Invest\Invest.csproj", "{8F037034-67AA-4AD9-A835-D756E29E0DD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomDice.Tests", "RandomDice.Tests\RandomDice.Tests.csproj", "{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,18 @@ Global
 		{8F037034-67AA-4AD9-A835-D756E29E0DD2}.Release|x64.Build.0 = Release|Any CPU
 		{8F037034-67AA-4AD9-A835-D756E29E0DD2}.Release|x86.ActiveCfg = Release|Any CPU
 		{8F037034-67AA-4AD9-A835-D756E29E0DD2}.Release|x86.Build.0 = Release|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Debug|x64.Build.0 = Debug|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Debug|x86.Build.0 = Debug|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Release|x64.ActiveCfg = Release|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Release|x64.Build.0 = Release|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Release|x86.ActiveCfg = Release|Any CPU
+		{F5AD7D67-E662-4EEA-91C9-9DE1855E06B9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8F037034-67AA-4AD9-A835-D756E29E0DD2} = {F458B170-C1FE-11EC-9572-D5FD7D37C0E1}
